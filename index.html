@@ -23,6 +23,31 @@
                 <li><a href="notes.html">Notes</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <button type="button" class="nav-search-btn" id="open-cmd" aria-label="Open command palette">
+                        <svg class="nav-search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <span>Search</span>
+                        <kbd class="nav-search-kbd">⌘K</kbd>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="nav-theme-btn" id="theme-toggle" aria-label="Toggle theme">
+                        <svg class="nav-theme-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -30,9 +55,62 @@
     <main>
         <section class="hero">
             <div class="hero-container">
-                <div class="hero-folio">№ 01 / INDEX</div>
-                <h1 class="hero-title">Archive</h1>
-                <p class="hero-lead">Selected projects and occasional notes.</p>
+                <div class="hero-content">
+                    <div class="hero-folio">№ 01 / INDEX</div>
+                    <h1 class="hero-title">Work Archive</h1>
+                    <p class="hero-lead">A collection of <a href="projects.html" class="hero-link">selected projects</a>, <a href="notes.html" class="hero-link">occasional notes</a>, and <a href="about.html" class="hero-link">background</a> maintained as reference.</p>
+                </div>
+                <div class="hero-visual">
+                    <a href="projects.html" class="hero-visual-link" aria-label="View projects">
+                        <svg class="visual-artwork" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="400" fill="#FFFCF5"/>
+
+                            <!-- Background grid lines -->
+                            <line x1="40" y1="80" x2="360" y2="80" stroke="#E8DFC8" stroke-width="1"/>
+                            <line x1="40" y1="320" x2="360" y2="320" stroke="#E8DFC8" stroke-width="1"/>
+                            <line x1="80" y1="40" x2="80" y2="360" stroke="#E8DFC8" stroke-width="1"/>
+                            <line x1="320" y1="40" x2="320" y2="360" stroke="#E8DFC8" stroke-width="1"/>
+
+                            <!-- Main card stack -->
+                            <g class="visual-shape">
+                                <rect x="100" y="140" width="200" height="140" rx="8" fill="#F5F0E3" stroke="#D4C6AB" stroke-width="2"/>
+                                <line x1="100" y1="170" x2="300" y2="170" stroke="#D4C6AB" stroke-width="1"/>
+                                <rect x="120" y="185" width="60" height="6" rx="3" fill="#3B6DFF"/>
+                                <rect x="120" y="205" width="140" height="4" rx="2" fill="#B3A89B"/>
+                                <rect x="120" y="220" width="120" height="4" rx="2" fill="#B3A89B"/>
+                            </g>
+
+                            <!-- Floating accent cards -->
+                            <g class="visual-shape">
+                                <rect x="60" y="100" width="90" height="70" rx="6" fill="#E85D44" opacity="0.9"/>
+                                <text x="75" y="130" font-family="monospace" font-size="11" fill="white" opacity="0.9">01</text>
+                            </g>
+
+                            <g class="visual-shape">
+                                <rect x="250" y="240" width="90" height="70" rx="6" fill="#3AA76D" opacity="0.9"/>
+                                <circle cx="295" cy="275" r="12" fill="white" opacity="0.3"/>
+                            </g>
+
+                            <!-- Corner index mark -->
+                            <g class="visual-shape">
+                                <circle cx="80" cy="320" r="24" fill="#3B6DFF" opacity="0.15"/>
+                                <circle cx="80" cy="320" r="16" fill="#3B6DFF" opacity="0.3"/>
+                                <circle cx="80" cy="320" r="8" fill="#3B6DFF"/>
+                            </g>
+
+                            <!-- Decorative rule -->
+                            <line class="visual-shape" x1="160" y1="310" x2="240" y2="310" stroke="#E85D44" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="featured-container">
+                <div class="featured-label">Featured</div>
+                <h2 class="featured-title">NutriTrack</h2>
+                <p class="featured-desc">Available in the <a href="projects.html" class="featured-link">projects catalogue</a>.</p>
             </div>
         </section>
     </main>
@@ -42,6 +120,23 @@
             <div class="footer-brand">Portfolio</div>
         </div>
     </footer>
+
+    <div class="cmd-overlay" id="cmd-overlay" role="dialog" aria-modal="true" aria-labelledby="cmd-title">
+        <div class="cmd-palette">
+            <div class="cmd-header">
+                <svg class="cmd-search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <label for="cmd-input" id="cmd-title" class="sr-only">Command palette</label>
+                <input type="text" class="cmd-input" id="cmd-input" placeholder="Search pages and actions..." autocomplete="off">
+                <button type="button" class="cmd-close" id="cmd-close" aria-label="Close">ESC</button>
+            </div>
+            <div class="cmd-results" id="cmd-results" role="listbox"></div>
+        </div>
+    </div>
+
+    <div class="sr-only" role="status" aria-live="polite" aria-atomic="true" id="clipboard-status"></div>
 
     <script src="app.js"></script>
 </body>
