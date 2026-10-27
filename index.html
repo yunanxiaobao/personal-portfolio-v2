@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio framework with project, notes, profile and contact sections">
+    <title>Portfolio</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav" aria-label="Primary navigation">
+        <div class="nav-container">
+            <a href="#intro" class="nav-logo">Portfolio</a>
+            <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+            </button>
+            <ul id="nav-menu" class="nav-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#notes">Notes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="intro" class="intro">
+            <div class="intro-container">
+                <div class="intro-content">
+                    <h1 class="intro-title">Portfolio</h1>
+                    <div class="intro-meta">
+                    </div>
+                </div>
+                <div class="intro-visual">
+                    <div class="visual-shape visual-shape-1"></div>
+                    <div class="visual-shape visual-shape-2"></div>
+                    <div class="visual-shape visual-shape-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Projects</h2>
+                    <p class="section-subtitle"></p>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card" data-project="nutritrack">
+                        <div class="project-visual">
+                            <div class="project-icon"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">NutriTrack</h3>
+                            <p class="project-description"></p>
+                            <div class="project-meta">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card-empty">
+                        <div class="project-visual project-visual-empty">
+                            <div class="project-icon-empty"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Add Project</h3>
+                            <p class="project-description"></p>
+                            <div class="project-meta">
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="notes" class="notes">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Notes</h2>
+                    <p class="section-subtitle"></p>
+                </div>
+                <div class="notes-list">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="section-container">
+                <div class="about-layout">
+                    <div class="about-main">
+                        <h2 class="section-title">About</h2>
+                        <div class="about-content">
+                        </div>
+                    </div>
+                    <aside class="about-sidebar">
+                        <div class="about-card">
+                            <h3 class="about-card-title">Profile</h3>
+                            <dl class="profile-list">
+                                <div class="profile-item">
+                                    <dt>Name</dt>
+                                    <dd></dd>
+                                </div>
+                                <div class="profile-item">
+                                    <dt>Role</dt>
+                                    <dd></dd>
+                                </div>
+                                <div class="profile-item">
+                                    <dt>Location</dt>
+                                    <dd></dd>
+                                </div>
+                                <div class="profile-item">
+                                    <dt>Interests</dt>
+                                    <dd></dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="section-container">
+                <div class="contact-layout">
+                    <div class="contact-main">
+                        <h2 class="section-title">Contact</h2>
+                        <p class="contact-text"></p>
+                    </div>
+                    <div class="contact-methods">
+                        <div class="contact-card">
+                            <h3 class="contact-card-title">Email</h3>
+                            <p class="contact-card-value"></p>
+                        </div>
+                        <div class="contact-card">
+                            <h3 class="contact-card-title">Social</h3>
+                            <p class="contact-card-value"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-text">Portfolio</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
